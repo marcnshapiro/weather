@@ -6,7 +6,7 @@ var longitude = 0;
 var cityName = "";
 
 $(document).ready( function() {
-  $.getJSON("http://ipinfo.io/json", function(ipApi) {
+  $.getJSON("https://crossorigin.me/http://ipinfo.io/json", function(ipApi) {
     cityName = ipApi.city + ", " + ipApi.region + " " +ipApi.postal + ", " + ipApi.country;
     loc = ipApi.loc.split(",");
     latitude = parseFloat(loc[0]);
@@ -37,7 +37,7 @@ $(document).ready( function() {
 });
 
 function getWeather () {
-  var weatherURL = "http://api.openweathermap.org/data/2.5/weather?";
+  var weatherURL = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?";
   
   weatherURL += "lat=" + latitude
   weatherURL += "&lon=" + longitude
