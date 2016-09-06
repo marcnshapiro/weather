@@ -1,0 +1,44 @@
+body {
+  background-color: #a0c0ff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Times New Roman";
+}
+
+.btn-custom {
+  border:1px solid #20538D;
+  background: #3f7fff;
+  color: #ffff00 !important;
+  margin: 10px;
+  padding: 10px 5px;
+  font-size: 20px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;  
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
+}
+
+.btn-custom:hover, .btn-custom:focus {
+  background: #3f6fff !important;
+  border: solid 1px #2A4E77;
+  text-decoration: none;  
+}
+
+.btn-custom:active {
+    -webkit-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.6);
+    background: #0000ff !important;
+    border: solid 1px #203E5F;
+}
