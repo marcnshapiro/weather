@@ -6,15 +6,16 @@ var longitude = 0;
 var cityName = "";
 
 $(document).ready( function() {
-  $.getJSON("https://crossorigin.me/http://ipinfo.io/json", function(ipApi) {
-    cityName = ipApi.city + ", " + ipApi.region + " " +ipApi.postal + ", " + ipApi.country;
-    loc = ipApi.loc.split(",");
-    latitude = parseFloat(loc[0]);
-    longitude = parseFloat(loc[1]);
-    
+  $.getJSON("https://freegeoip.net/json/?callback", function(ipApi) {
+    cityName = ipApi.city + ", " + ipApi.region_code + " " +ipApi.zip_code + ", " + ipApi.country_code;
+    alert(cityName);
+    latitude = parseFloat(ipApi.latitude);
+    longitude = parseFloat(ipApi.longitude);
+    alert(latitude + ":" + longitude);
+
     $("#City").html(cityName);
     
-    if (ipApi.country == "US") {
+    if (ipApi.country_code == "US") {
       UoM = "imperial"
     } else {
       UoM = "imperial"
