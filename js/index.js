@@ -8,10 +8,8 @@ var cityName = "";
 $(document).ready( function() {
   $.getJSON("https://freegeoip.net/json/?callback", function(ipApi) {
     cityName = ipApi.city + ", " + ipApi.region_code + " " +ipApi.zip_code + ", " + ipApi.country_code;
-    alert(cityName);
     latitude = parseFloat(ipApi.latitude);
     longitude = parseFloat(ipApi.longitude);
-    alert(latitude + ":" + longitude);
 
     $("#City").html(cityName);
     
